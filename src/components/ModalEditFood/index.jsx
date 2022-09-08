@@ -5,6 +5,14 @@ import { Form } from './styles';
 import Modal from '../Modal';
 import Input from '../Input';
 
+// export interface IEditingFoodProps {
+//   id: number;
+//   image: string;
+//   name: string;
+//   price: string;
+//   description: string;
+// }
+
 class ModalEditFood extends Component {
   constructor(props) {
     super(props);
