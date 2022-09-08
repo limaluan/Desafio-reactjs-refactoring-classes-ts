@@ -4,7 +4,10 @@ import Header from "../../components/Header";
 import api from "../../services/api";
 import Food from "../../components/Food";
 import ModalAddFood from "../../components/ModalAddFood";
-import ModalEditFood from "../../components/ModalEditFood";
+import {
+  
+  IEditingFoodProps, ModalEditFood,
+} from "../../components/ModalEditFood";
 import { FoodsContainer } from "./styles";
 
 export interface IFoodProps {
@@ -14,14 +17,6 @@ export interface IFoodProps {
   price: string;
   available: boolean;
   image: string;
-}
-
-export interface IEditingFoodProps {
-  id: number;
-  image: string;
-  name: string;
-  price: string;
-  description: string;
 }
 
 export function Dashboard() {
@@ -96,7 +91,7 @@ export function Dashboard() {
       <ModalEditFood
         isOpen={editModalOpen}
         setIsOpen={toggleEditModal}
-        editingFood={editingFood}
+        editingFood={editingFood!}
         handleUpdateFood={handleUpdateFood}
       />
 
